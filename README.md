@@ -154,3 +154,18 @@ The raw CFD data and trained model checkpoint will be made available through a p
 
 See [`data/README.md`](data/README.md) for additional information.
 
+
+## Citation
+
+If you use this repository, please cite the associated work:
+
+**Khalid Rafiq and Aditya G. Nair**,  
+*Cluster-based feedback control of separated-flow transients in a learned latent space.*
+
+A permanent paper citation and DOI will be added upon publication.
+
+## Data and model archive
+
+The large CFD datasets and trained residual VAE checkpoint will be released through a permanent archival repository.
+
+A DOI and download link will be added here when the archive is published.
