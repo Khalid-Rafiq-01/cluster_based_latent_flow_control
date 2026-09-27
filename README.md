@@ -164,12 +164,6 @@ If you use this repository, please cite the associated work:
 
 A permanent paper citation and DOI will be added upon publication.
 
-## Data and model archive
-
-The large CFD datasets and trained residual VAE checkpoint will be released through a permanent archival repository.
-
-A DOI and download link will be added here when the archive is published.
-
 
 ## License
 
