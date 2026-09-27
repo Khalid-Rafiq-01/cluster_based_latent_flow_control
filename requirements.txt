@@ -1,0 +1,13 @@
+torch
+numpy
+matplotlib
+pandas
+scikit-learn
+umap-learn
+joblib
+opencv-python
+Pillow
+imageio
+plotly
+ipywidgets
+jupyter

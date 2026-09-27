@@ -1,0 +1,35 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environments
+.env
+.venv/
+venv/
+env/
+
+# Editors
+.vscode/
+.idea/
+
+# Large raw simulation data
+data/*
+
+# Keep documentation for omitted data
+!data/README.md
+
+# Large trained model checkpoint
+artifacts/best_ResidualVAE_d8.pth
+
+# Local cleanup / backup files
+notebooks_backup/
+fix_notebooks.py
+fix_data_paths.py
