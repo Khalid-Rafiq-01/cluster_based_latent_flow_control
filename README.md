@@ -105,7 +105,7 @@ The unforced trajectory remains within the shedding family, while actuation prov
 | `notebooks/01_vae_analysis.ipynb` | VAE reconstruction, latent-space analysis, clustering diagnostics, and macrostate visualization |
 | `notebooks/02_control_analysis.ipynb` | Closed-loop control analysis, residence times, transition statistics, and open-loop arrest/release/recapture probes |
 | `notebooks/03_make_gifs.ipynb` | Generation of the latent-space control animations |
-| `src/vae_model.py` | Residual convolutional VAE architecture |
+| `src/vae_model.py` | Plain and residual convolutional VAE architectures |
 | `src/functions.py` | Data preprocessing and radial-basis feedback utilities |
 | `artifacts/` | Compact learned quantities including latent states, cluster centroids, labels, aerodynamic statistics, and the fitted UMAP transformation |
 | `control_laws/` | Optimized control-law parameters for the $C_0$ hold and $C_6$ escape cases |
