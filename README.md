@@ -41,21 +41,21 @@ The resulting C₆-targeting dynamics form an **arrest–release–recapture cyc
 
 For each vorticity field $\omega(\mathbf{x},t)$, the trained encoder provides the deterministic latent state
 
-$$
+```math
 \mathbf{z}(t)
 =
-\mathcal{E}_{\mu}\bigl(\omega(\mathbf{x},t)\bigr)
-\in \mathbb{R}^{8},
-$$
+\mathcal{E}_{\mu}\left[\omega(\mathbf{x},t)\right]
+\in \mathbb{R}^{8}.
+```
 
-where $\mathcal{E}_{\mu}$ denotes the deterministic encoder-mean mapping.
+Here, $\mathcal{E}_{\mu}$ denotes the deterministic encoder-mean mapping.
 
 The actuation-enriched latent ensemble is partitioned into $K=9$ recurring macrostates with centroids
-$\{\mathbf{c}_k\}_{k=0}^{K-1}$.
+$\mathbf{c}_0,\ldots,\mathbf{c}_{K-1}$.
 
 Each macrostate is assigned an actuation amplitude $b_k$. Rather than switching discontinuously between cluster actions, the feedback is smoothly interpolated throughout the latent space using normalized Gaussian radial-basis functions:
 
-$$
+```math
 b(\mathbf{z})
 =
 \frac{
@@ -70,14 +70,13 @@ b_k
 -\frac{\|\mathbf{z}-\mathbf{c}_k\|_2^2}{2\sigma^2}
 \right)
 }.
-$$
+```
 
-Here, $\sigma$ controls the interpolation width. The cluster amplitudes $\{b_k\}$ and $\sigma$ are optimized for a prescribed target state while penalizing actuation effort.
+Here, $\sigma$ controls the interpolation width. The cluster amplitudes $b_k$ and $\sigma$ are optimized for a prescribed target state while penalizing actuation effort.
 
 <p align="center">
   <img src="assets/workflow.png" width="75%">
 </p>
-
 
 ## Learned macrostates
 
