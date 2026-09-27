@@ -51,7 +51,10 @@ For each vorticity field $\omega(\mathbf{x},t)$, the trained encoder provides th
 Here, $\mathcal{E}_{\mu}$ denotes the deterministic encoder-mean mapping.
 
 The actuation-enriched latent ensemble is partitioned into $K=9$ recurring macrostates with centroids
-$\mathbf{c}_0,\ldots,\mathbf{c}_{K-1}$.
+
+```math
+\mathbf{c}_0,\mathbf{c}_1,\ldots,\mathbf{c}_8.
+```
 
 Each macrostate is assigned an actuation amplitude $b_k$. Rather than switching discontinuously between cluster actions, the feedback is smoothly interpolated throughout the latent space using normalized Gaussian radial-basis functions:
 
@@ -110,6 +113,27 @@ The unforced trajectory remains within the shedding family, while actuation prov
 | `gifs/` | Individual animations for the baseline, hold, and escape trajectories |
 | `assets/` | Figures and animations used on this project page |
 | `data/` | Documentation for the large CFD snapshot data distributed separately |
+
+
+
+## Installation and usage
+
+The analysis was developed with Python 3.10.
+
+Install the required Python packages with
+
+```bash
+pip install -r requirements.txt
+```
+
+The notebooks are organized in the approximate order of the analysis:
+
+1. `notebooks/01_vae_analysis.ipynb` — VAE reconstruction, latent-space analysis, clustering diagnostics, and macrostate visualization.
+2. `notebooks/02_control_analysis.ipynb` — closed-loop control analysis, residence times, transition statistics, and arrest–release–recapture probes.
+3. `notebooks/03_make_gifs.ipynb` — generation of the latent-space control animations.
+
+Large CFD snapshot datasets and the trained residual VAE checkpoint are distributed separately. See the section below and [`data/README.md`](data/README.md) for details.
+
 
 
 ## Data and pretrained model
