@@ -42,9 +42,13 @@ The resulting C₆-targeting dynamics form an **arrest–release–recapture cyc
 For each vorticity field $\omega(\mathbf{x},t)$, the trained encoder provides the deterministic latent state
 
 $$
-\mathbf{z}(t) = \boldsymbol{\mu}\!\left(\omega(t)\right)
-\in \mathbb{R}^{8}.
+\mathbf{z}(t)
+=
+\mathcal{E}_{\mu}\bigl(\omega(\mathbf{x},t)\bigr)
+\in \mathbb{R}^{8},
 $$
+
+where $\mathcal{E}_{\mu}$ denotes the deterministic encoder-mean mapping.
 
 The actuation-enriched latent ensemble is partitioned into $K=9$ recurring macrostates with centroids
 $\{\mathbf{c}_k\}_{k=0}^{K-1}$.
@@ -52,18 +56,19 @@ $\{\mathbf{c}_k\}_{k=0}^{K-1}$.
 Each macrostate is assigned an actuation amplitude $b_k$. Rather than switching discontinuously between cluster actions, the feedback is smoothly interpolated throughout the latent space using normalized Gaussian radial-basis functions:
 
 $$
-b(\mathbf{z}) =
+b(\mathbf{z})
+=
 \frac{
-\displaystyle \sum_{k=0}^{K-1}
+\sum_{k=0}^{K-1}
 b_k
-\exp\!\left[
+\exp\left(
 -\frac{\|\mathbf{z}-\mathbf{c}_k\|_2^2}{2\sigma^2}
-\right]
+\right)
 }{
-\displaystyle \sum_{k=0}^{K-1}
-\exp\!\left[
+\sum_{k=0}^{K-1}
+\exp\left(
 -\frac{\|\mathbf{z}-\mathbf{c}_k\|_2^2}{2\sigma^2}
-\right]
+\right)
 }.
 $$
 
