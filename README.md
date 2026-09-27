@@ -169,3 +169,8 @@ A permanent paper citation and DOI will be added upon publication.
 The large CFD datasets and trained residual VAE checkpoint will be released through a permanent archival repository.
 
 A DOI and download link will be added here when the archive is published.
+
+
+## License
+
+This project is released under the [MIT License](LICENSE).
